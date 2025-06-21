@@ -29,18 +29,21 @@ export type VulnerabilityReport = {
     search_order: number;
     bookmarked: boolean;
     read: boolean;
-    issues_issue_finders: Array<{
-      wardens_warden: {
+    // Added missing properties
+    tags?: string[];
+    forked_from?: string[];
+    issues_issue_finders?: Array<{
+      wardens_warden?: {
         handle: string;
       };
     }>;
-    auditfirms_auditfirm: {
+    auditfirms_auditfirm?: {
       name: string;
       logo_square: string;
     };
-    protocols_protocol: {
+    protocols_protocol?: {
       name: string;
       protocols_protocolcategoryscore: any[];
     };
-    issues_issuetagscore: any[];
+    issues_issuetagscore?: any[];
   };
